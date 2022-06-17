@@ -3,4 +3,8 @@ import scrapy
 
 class BricketSetSpider(scrapy.Spider):
     name = "brickset_spider"
-    start_urls = ['http://brickset.com/sets/year-2016']
+
+    def __init__(self, filename=None):
+        if filename:
+            with open(filename, 'r') as f:
+                self.start_urls = f.readlines()
