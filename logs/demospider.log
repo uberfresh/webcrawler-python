@@ -1,0 +1,400 @@
+2022-06-17 12:16:15 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2022-06-17 12:16:15 [scrapy.extensions.telnet] INFO: Telnet Password: d83b6c8149494474
+2022-06-17 12:16:15 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2022-06-17 12:16:15 [twisted] CRITICAL: Unhandled error in Deferred:
+2022-06-17 12:16:15 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/twisted/internet/defer.py", line 1660, in _inlineCallbacks
+    result = current_context.run(gen.send, result)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/crawler.py", line 101, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/crawler.py", line 113, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/spiders/crawl.py", line 137, in from_crawler
+    spider = super().from_crawler(crawler, *args, **kwargs)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/spiders/__init__.py", line 48, in from_crawler
+    spider = cls(*args, **kwargs)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/pythonCrawler/spiders/demospider.py", line 15, in __init__
+    with open(filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '../million.txt'
+2022-06-17 12:16:48 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2022-06-17 12:16:48 [scrapy.extensions.telnet] INFO: Telnet Password: 09f33324cf82e417
+2022-06-17 12:16:48 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2022-06-17 12:16:48 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-06-17 12:16:48 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-06-17 12:16:48 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2022-06-17 12:16:48 [scrapy.core.engine] INFO: Spider opened
+2022-06-17 12:16:48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-06-17 12:16:48 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-06-17 12:16:48 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/core/engine.py", line 150, in _next_request
+    request = next(self.slot.start_requests)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/spiders/__init__.py", line 64, in start_requests
+    yield Request(url, dont_filter=True)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/http/request/__init__.py", line 60, in __init__
+    self._set_url(url)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/http/request/__init__.py", line 108, in _set_url
+    raise ValueError(f'Missing scheme in request url: {self._url}')
+ValueError: Missing scheme in request url: Domain
+2022-06-17 12:16:48 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-06-17 12:16:48 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 0.001828,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 6, 17, 10, 16, 48, 267693),
+ 'log_count/DEBUG': 1,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'memusage/max': 138366976,
+ 'memusage/startup': 138366976,
+ 'start_time': datetime.datetime(2022, 6, 17, 10, 16, 48, 265865)}
+2022-06-17 12:16:48 [scrapy.core.engine] INFO: Spider closed (finished)
+2022-06-17 12:20:18 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2022-06-17 12:20:18 [scrapy.extensions.telnet] INFO: Telnet Password: 6024a7c554026efc
+2022-06-17 12:20:18 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2022-06-17 12:20:18 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-06-17 12:20:18 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-06-17 12:20:18 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2022-06-17 12:20:18 [scrapy.core.engine] INFO: Spider opened
+2022-06-17 12:20:18 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-06-17 12:20:18 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-06-17 12:20:18 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/core/engine.py", line 150, in _next_request
+    request = next(self.slot.start_requests)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/spiders/__init__.py", line 58, in start_requests
+    if not self.start_urls and hasattr(self, 'start_url'):
+AttributeError: 'DemospiderSpider' object has no attribute 'start_urls'
+2022-06-17 12:20:18 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-06-17 12:20:18 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 0.001674,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 6, 17, 10, 20, 18, 156702),
+ 'log_count/DEBUG': 1,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'memusage/max': 68968448,
+ 'memusage/startup': 68968448,
+ 'start_time': datetime.datetime(2022, 6, 17, 10, 20, 18, 155028)}
+2022-06-17 12:20:18 [scrapy.core.engine] INFO: Spider closed (finished)
+2022-06-17 12:20:38 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2022-06-17 12:20:38 [scrapy.extensions.telnet] INFO: Telnet Password: c4e366a4d3ebc16d
+2022-06-17 12:20:38 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2022-06-17 12:20:38 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-06-17 12:20:38 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-06-17 12:20:38 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2022-06-17 12:20:38 [scrapy.core.engine] INFO: Spider opened
+2022-06-17 12:20:38 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-06-17 12:20:38 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-06-17 12:20:38 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-06-17 12:20:38 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 0.001534,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 6, 17, 10, 20, 38, 424326),
+ 'log_count/DEBUG': 1,
+ 'log_count/INFO': 10,
+ 'memusage/max': 69017600,
+ 'memusage/startup': 69017600,
+ 'start_time': datetime.datetime(2022, 6, 17, 10, 20, 38, 422792)}
+2022-06-17 12:20:38 [scrapy.core.engine] INFO: Spider closed (finished)
+2022-06-17 12:26:06 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2022-06-17 12:26:06 [scrapy.extensions.telnet] INFO: Telnet Password: 5dd2cd65d365df26
+2022-06-17 12:26:06 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2022-06-17 12:26:06 [twisted] CRITICAL: Unhandled error in Deferred:
+2022-06-17 12:26:06 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/twisted/internet/defer.py", line 1660, in _inlineCallbacks
+    result = current_context.run(gen.send, result)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/crawler.py", line 101, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/crawler.py", line 113, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/spiders/crawl.py", line 137, in from_crawler
+    spider = super().from_crawler(crawler, *args, **kwargs)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/spiders/__init__.py", line 48, in from_crawler
+    spider = cls(*args, **kwargs)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/pythonCrawler/spiders/demospider.py", line 15, in __init__
+    with open(filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'million.txt'
+2022-06-17 12:26:11 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2022-06-17 12:26:11 [scrapy.extensions.telnet] INFO: Telnet Password: 6ba927d13285554f
+2022-06-17 12:26:11 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2022-06-17 12:26:11 [twisted] CRITICAL: Unhandled error in Deferred:
+2022-06-17 12:26:11 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/twisted/internet/defer.py", line 1660, in _inlineCallbacks
+    result = current_context.run(gen.send, result)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/crawler.py", line 101, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/crawler.py", line 113, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/spiders/crawl.py", line 137, in from_crawler
+    spider = super().from_crawler(crawler, *args, **kwargs)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/spiders/__init__.py", line 48, in from_crawler
+    spider = cls(*args, **kwargs)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/pythonCrawler/spiders/demospider.py", line 15, in __init__
+    with open(filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'million.txt'
+2022-06-17 12:26:23 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2022-06-17 12:26:23 [scrapy.extensions.telnet] INFO: Telnet Password: 5eb77b8bfb528ce3
+2022-06-17 12:26:23 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2022-06-17 12:26:23 [twisted] CRITICAL: Unhandled error in Deferred:
+2022-06-17 12:26:23 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/twisted/internet/defer.py", line 1660, in _inlineCallbacks
+    result = current_context.run(gen.send, result)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/crawler.py", line 101, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/crawler.py", line 113, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/spiders/crawl.py", line 137, in from_crawler
+    spider = super().from_crawler(crawler, *args, **kwargs)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/.venv/lib/python3.9/site-packages/scrapy/spiders/__init__.py", line 48, in from_crawler
+    spider = cls(*args, **kwargs)
+  File "/home/uberfresh/work/webcrawler-python/pythonCrawler/pythonCrawler/spiders/demospider.py", line 15, in __init__
+    with open(filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './million.txt'
+2022-06-17 12:30:09 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2022-06-17 12:30:09 [scrapy.extensions.telnet] INFO: Telnet Password: 3cd2fb57339ea00a
+2022-06-17 12:30:09 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2022-06-17 12:30:09 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-06-17 12:30:09 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-06-17 12:30:09 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2022-06-17 12:30:09 [scrapy.core.engine] INFO: Spider opened
+2022-06-17 12:30:09 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-06-17 12:30:09 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-06-17 12:30:09 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "/home/uberfresh/work/webcrawler-python/.venv/lib/python3.9/site-packages/scrapy/core/engine.py", line 150, in _next_request
+    request = next(self.slot.start_requests)
+  File "/home/uberfresh/work/webcrawler-python/.venv/lib/python3.9/site-packages/scrapy/spiders/__init__.py", line 64, in start_requests
+    yield Request(url, dont_filter=True)
+  File "/home/uberfresh/work/webcrawler-python/.venv/lib/python3.9/site-packages/scrapy/http/request/__init__.py", line 60, in __init__
+    self._set_url(url)
+  File "/home/uberfresh/work/webcrawler-python/.venv/lib/python3.9/site-packages/scrapy/http/request/__init__.py", line 108, in _set_url
+    raise ValueError(f'Missing scheme in request url: {self._url}')
+ValueError: Missing scheme in request url: Domain
+2022-06-17 12:30:09 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-06-17 12:30:09 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 0.001923,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 6, 17, 10, 30, 9, 948475),
+ 'log_count/DEBUG': 1,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'memusage/max': 150044672,
+ 'memusage/startup': 150044672,
+ 'start_time': datetime.datetime(2022, 6, 17, 10, 30, 9, 946552)}
+2022-06-17 12:30:09 [scrapy.core.engine] INFO: Spider closed (finished)
+2022-06-17 12:32:44 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2022-06-17 12:32:44 [scrapy.extensions.telnet] INFO: Telnet Password: d94b77b44e756fac
+2022-06-17 12:32:44 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2022-06-17 12:32:44 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-06-17 12:32:44 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-06-17 12:32:44 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2022-06-17 12:32:44 [scrapy.core.engine] INFO: Spider opened
+2022-06-17 12:32:44 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-06-17 12:32:44 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-06-17 12:32:44 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "/home/uberfresh/work/webcrawler-python/.venv/lib/python3.9/site-packages/scrapy/core/engine.py", line 150, in _next_request
+    request = next(self.slot.start_requests)
+  File "/home/uberfresh/work/webcrawler-python/.venv/lib/python3.9/site-packages/scrapy/spiders/__init__.py", line 64, in start_requests
+    yield Request(url, dont_filter=True)
+  File "/home/uberfresh/work/webcrawler-python/.venv/lib/python3.9/site-packages/scrapy/http/request/__init__.py", line 60, in __init__
+    self._set_url(url)
+  File "/home/uberfresh/work/webcrawler-python/.venv/lib/python3.9/site-packages/scrapy/http/request/__init__.py", line 108, in _set_url
+    raise ValueError(f'Missing scheme in request url: {self._url}')
+ValueError: Missing scheme in request url: Domain
+2022-06-17 12:32:44 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-06-17 12:32:44 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 0.00182,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 6, 17, 10, 32, 44, 596604),
+ 'log_count/DEBUG': 1,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'memusage/max': 138252288,
+ 'memusage/startup': 138252288,
+ 'start_time': datetime.datetime(2022, 6, 17, 10, 32, 44, 594784)}
+2022-06-17 12:32:44 [scrapy.core.engine] INFO: Spider closed (finished)
+2022-06-17 12:33:16 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2022-06-17 12:33:16 [scrapy.extensions.telnet] INFO: Telnet Password: 05dba12d8b80ee42
+2022-06-17 12:33:16 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2022-06-17 12:33:16 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-06-17 12:33:16 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-06-17 12:33:16 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2022-06-17 12:33:16 [scrapy.core.engine] INFO: Spider opened
+2022-06-17 12:33:16 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-06-17 12:33:16 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-06-17 12:33:16 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "/home/uberfresh/work/webcrawler-python/.venv/lib/python3.9/site-packages/scrapy/core/engine.py", line 150, in _next_request
+    request = next(self.slot.start_requests)
+  File "/home/uberfresh/work/webcrawler-python/.venv/lib/python3.9/site-packages/scrapy/spiders/__init__.py", line 64, in start_requests
+    yield Request(url, dont_filter=True)
+  File "/home/uberfresh/work/webcrawler-python/.venv/lib/python3.9/site-packages/scrapy/http/request/__init__.py", line 60, in __init__
+    self._set_url(url)
+  File "/home/uberfresh/work/webcrawler-python/.venv/lib/python3.9/site-packages/scrapy/http/request/__init__.py", line 108, in _set_url
+    raise ValueError(f'Missing scheme in request url: {self._url}')
+ValueError: Missing scheme in request url: Domain
+2022-06-17 12:33:16 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-06-17 12:33:16 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 0.001909,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 6, 17, 10, 33, 16, 566688),
+ 'log_count/DEBUG': 1,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'memusage/max': 138117120,
+ 'memusage/startup': 138117120,
+ 'start_time': datetime.datetime(2022, 6, 17, 10, 33, 16, 564779)}
+2022-06-17 12:33:16 [scrapy.core.engine] INFO: Spider closed (finished)
